@@ -1,11 +1,11 @@
 "use client";
-import { Inter } from "next/font/google";
+import { Anton } from "next/font/google";
 import "./globals.scss";
 import "bulma/css/bulma.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Anton({ subsets: ["latin"], weight: "400" });
 
 const metadata = {
   title: "Create Next App",

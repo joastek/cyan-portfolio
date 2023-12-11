@@ -12,6 +12,7 @@ const ParticleRing = () => {
   };
   const rotationX = useSpring(useMotionValue(0), options);
   const rotationY = useSpring(useMotionValue(0), options);
+  const rotationZ = useSpring(0.02, options);
   const handleMouseMove = (e) => {
     const mouseY = e.clientY / window.innerHeight; // Normalizacja pozycji kursora
     const mouseX = e.clientX / window.innerWidth;
@@ -50,6 +51,7 @@ const ParticleRing = () => {
           groupRef={groupRef}
           rotationX={rotationX}
           rotationY={rotationY}
+          rotationZ={rotationZ}
         />
       </Canvas>
     </div>
@@ -57,11 +59,14 @@ const ParticleRing = () => {
 };
 
 const PointCircle = ({ groupRef, rotationX, rotationY }) => {
-  useFrame(() => {
-    // Ręczna aktualizacja rotacji w każdej ramce animacji
+  const ref = useRef(null);
+  useFrame(({ clock }) => {
     if (groupRef.current) {
       groupRef.current.rotation.x = rotationX.get();
       groupRef.current.rotation.y = rotationY.get();
+    }
+    if (groupRef.current?.rotation) {
+      groupRef.current.rotation.z = clock.getElapsedTime() * 0.04;
     }
   });
 

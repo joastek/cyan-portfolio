@@ -3,10 +3,10 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Logo from "../../public/logo.png";
 import ParticleRing from "../components/cube";
-import BurgerHeader from "./NavBar/BurgerHeader";
-import StickyCursor from "./NavBar/stickyCursor";
+import BurgerHeader from "../components/NavBar/BurgerHeader";
+import StickyCursor from "../components/cube/stickyCursor";
 import Link from "next/link";
-import Header from "./NavBar/Header";
+import Header from "../components/NavBar/Header";
 
 export default function Home() {
   const stickyElement = useRef(null);
@@ -14,12 +14,17 @@ export default function Home() {
   return (
     <>
       {" "}
-      <div className="absolute h-screen w-screen z-40">
+      <div className="absolute h-screen w-screen z-0">
         {" "}
         <ParticleRing /> <StickyCursor stickyElement={stickyElement} />
       </div>{" "}
       <header className="p-6 fixed w-full z-50">
-        <Header menuIsActive={menuIsActive} setMenuIsActive={setMenuIsActive} />
+        <div className="mr-6">
+          <Header
+            menuIsActive={menuIsActive}
+            setMenuIsActive={setMenuIsActive}
+          />{" "}
+        </div>
         <BurgerHeader menuIsActive={menuIsActive} />
         <div className="columns ">
           <div className="column is-1">
@@ -30,8 +35,19 @@ export default function Home() {
       <main className="m-auto  h-screen ">
         <div className="container h-full justify-center text-center  m-auto">
           <div className="columns  h-full ">
-            <div className="column m-auto z-50 text-2xl  ">
-              <p>Hello, my name is Jan Czyszczoń</p>
+            <div className="flex column mx-auto z-1  ">
+              <p className="pt-[30%] tracking-wide text-5xl   font-extrabold">
+                Hello, my name is Jan Czyszczoń
+              </p>
+              <p>Im a front-end developer !</p>
+              <div className="mt-6">
+                <div>
+                  <p>my projects</p>
+                </div>
+                <div>
+                  <p>something about me</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
