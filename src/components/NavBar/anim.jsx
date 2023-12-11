@@ -38,11 +38,11 @@ export const anim = {
 };
 export const MainAnim = {
   initial: {
-    transition: { duration: 4.5 },
+    transition: { duration: 4.5, delay: 45 },
     opacity: 0,
     rotateX: 90,
     translateY: 90,
-    translateX: -40,
+    translateX: 0,
   },
   enter: (i) => ({
     opacity: 1,
@@ -51,13 +51,18 @@ export const MainAnim = {
     translateX: 0,
     transition: {
       duration: 0.75,
-      delay: 0.5 + i * 0.1,
+      delay: 1.5 + i * 0.1 + 45,
       ease: [0.215, 0.61, 0.355, 1],
       opacity: { duration: 0.65 },
     },
   }),
   exit: {
     opacity: 0,
-    transition: { duration: 4.5, type: "linear", ease: [0.76, 0, 0.24, 1] },
+    transition: {
+      duration: 4.5,
+      type: "linear",
+      ease: [0.76, 0, 0.24, 1],
+      delay: 45,
+    },
   },
 };

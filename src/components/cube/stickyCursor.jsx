@@ -37,7 +37,7 @@ export default function StickyCursor({ stickyElement }) {
   }, []);
 
   return (
-    <div>
+    <div className="z-50">
       <motion.div
         style={{
           left: smoothMouse.x,

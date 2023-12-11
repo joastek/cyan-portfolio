@@ -9,6 +9,7 @@ import { MainAnim, perspective } from "@/components/NavBar/anim";
 import Header from "../components/NavBar/Header";
 import Loading from "@/components/loading";
 import { motion } from "framer-motion";
+import Link from "next/link";
 export default function Home() {
   const stickyElement = useRef(null);
   const [menuIsActive, setMenuIsActive] = useState(false);
@@ -21,6 +22,7 @@ export default function Home() {
     };
     dataFetch();
   }, []);
+
   return isLoading ? (
     <>
       {" "}
@@ -29,18 +31,22 @@ export default function Home() {
   ) : (
     <>
       {" "}
+      <StickyCursor stickyElement={stickyElement} />
       <div className="absolute h-screen w-screen z-0">
         {" "}
-        <ParticleRing /> <StickyCursor stickyElement={stickyElement} />
+        <ParticleRing />
       </div>{" "}
-      <header className="p-6 fixed w-full z-50">
+      <header className="p-6 absolute w-full ">
         <div className="mr-6">
           <Header
             menuIsActive={menuIsActive}
             setMenuIsActive={setMenuIsActive}
           />{" "}
         </div>
-        <BurgerHeader menuIsActive={menuIsActive} />
+        <BurgerHeader
+          menuIsActive={menuIsActive}
+          setMenuIsActive={setMenuIsActive}
+        />
         <div className="columns ">
           <div className="column is-1">
             <Image src={Logo} alt="portfolio Logo" />
@@ -57,8 +63,7 @@ export default function Home() {
               <motion.div
                 variants={MainAnim}
                 initial="initial"
-                animate={menuIsActive ? "exit" : "enter"}
-                className="  h-full "
+                animate="enter"
                 exit="exit"
               >
                 <div className=" mx-auto z-1  ">
@@ -66,9 +71,12 @@ export default function Home() {
                     Hello, my name is Jan Czyszczoń
                   </p>
                   <p>Im a front-end developer !</p>
-                  <div className="mt-6">
+                  <div className="mt-6 z-50">
                     <div>
-                      <p>my projects</p>
+                      <Link href="/about" alt="" className="curosor-pointer ">
+                        {" "}
+                        <p>my projects</p>
+                      </Link>
                     </div>
                     <div>
                       <p>something about me</p>
