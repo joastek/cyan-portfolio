@@ -33,39 +33,52 @@ const Works = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <>
-      <header className=" absolute w-full">
-        <div className="mr-6">
+      <header className=" fixed w-screen z-50">
+        <div className="mr-6 ">
           <Header
             menuIsActive={menuIsActive}
             setMenuIsActive={setMenuIsActive}
           />{" "}
         </div>
-        <BurgerHeader
-          menuIsActive={menuIsActive}
-          setMenuIsActive={setMenuIsActive}
-        />
+
         <div className="">
           <Image src={Logo} alt="portfolio Logo" />
         </div>
       </header>{" "}
-      <main className="m-auto  h-screen flex ">
-        <div className=" mt-28   justify-center text-center m-auto">
-          <div className="space-y-12 ">
-            {projects.map((project, index) => {
-              return (
-                <Project
-                  key={index}
-                  index={index}
-                  title={project.title}
-                  description={project.description}
-                  setModal={setModal}
-                />
-              );
-            })}
+      {menuIsActive ? (
+        <>
+          {" "}
+          <div className="w-full h-full">
+            {" "}
+            <BurgerHeader
+              menuIsActive={menuIsActive}
+              setMenuIsActive={setMenuIsActive}
+            />
           </div>
-          <ModalProject modal={modal} project={projects} />
-        </div>{" "}
-      </main>
+        </>
+      ) : (
+        <>
+          {" "}
+          <main className="m-auto  h-screen flex ">
+            <div className=" mt-28   justify-center text-center m-auto">
+              <div className="space-y-12 ">
+                {projects.map((project, index) => {
+                  return (
+                    <Project
+                      key={index}
+                      index={index}
+                      title={project.title}
+                      description={project.description}
+                      setModal={setModal}
+                    />
+                  );
+                })}
+              </div>
+              <ModalProject modal={modal} project={projects} />
+            </div>{" "}
+          </main>
+        </>
+      )}
     </>
   );
 };

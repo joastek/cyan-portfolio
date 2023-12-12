@@ -106,7 +106,7 @@ export default function ModalProject({ modal, project }) {
         </div>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         ref={cursor}
         className={"cursor"}
         variants={scaleAnimation}
@@ -122,7 +122,7 @@ export default function ModalProject({ modal, project }) {
         animate={active ? "enter" : "closed"}
       >
         View
-      </motion.div>
+      </motion.div> */}
     </>
   );
 }

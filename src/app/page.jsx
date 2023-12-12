@@ -30,23 +30,20 @@ export default function Home() {
     </>
   ) : (
     <>
-      {" "}
       <StickyCursor stickyElement={stickyElement} />
-      <div className="absolute h-screen w-screen z-0">
+      <div className="absolute h-screen w-screen ">
         {" "}
         <ParticleRing />
       </div>{" "}
-      <header className="p-6 absolute w-full ">
-        <div className="mr-6">
+      <header className=" fixed  w-full">
+        <div className="">
+          {" "}
           <Header
             menuIsActive={menuIsActive}
             setMenuIsActive={setMenuIsActive}
           />{" "}
         </div>
-        <BurgerHeader
-          menuIsActive={menuIsActive}
-          setMenuIsActive={setMenuIsActive}
-        />
+
         <div className="columns ">
           <div className="column is-1">
             <Image src={Logo} alt="portfolio Logo" />
@@ -56,7 +53,14 @@ export default function Home() {
       <main className="m-auto  h-screen ">
         <div className="container h-full justify-center text-center m-auto">
           {menuIsActive ? (
-            <></>
+            <>
+              <div className="w-full h-full">
+                <BurgerHeader
+                  menuIsActive={menuIsActive}
+                  setMenuIsActive={setMenuIsActive}
+                />
+              </div>
+            </>
           ) : (
             <>
               {" "}
@@ -66,12 +70,12 @@ export default function Home() {
                 animate="enter"
                 exit="exit"
               >
-                <div className=" mx-auto z-1  ">
+                <div className=" mx-auto  ">
                   <p className="pt-[30%] tracking-wide text-5xl   font-extrabold">
                     Hello, my name is Jan Czyszczoń
                   </p>
                   <p>Im a front-end developer !</p>
-                  <div className="mt-6 z-50">
+                  <div className="mt-6">
                     <div>
                       <Link href="/about" alt="" className="curosor-pointer ">
                         {" "}

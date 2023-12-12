@@ -6,7 +6,7 @@ export default function Header({ menuIsActive, setMenuIsActive }) {
         onClick={() => {
           setMenuIsActive(!menuIsActive);
         }}
-        className="  my-auto flex-end p-6 cursor-pointer"
+        className="  my-auto flex-end p-6 cursor-pointer "
       >
         <div
           className={`${"burger"} ${
