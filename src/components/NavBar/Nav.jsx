@@ -7,17 +7,6 @@ const Nav = ({ menuIsActive, setMenuIsActive }) => {
   return (
     <>
       <div className="mt-28 ">
-        <Link
-          key={`b_1`}
-          href="/"
-          onClick={() => {
-            setMenuIsActive(!menuIsActive);
-          }}
-          className="text-white"
-        >
-          <a className="text-sm text-white">01</a>
-          home
-        </Link>
         {links.map((link, i) => {
           const { title, href, number } = link;
           return (
@@ -31,7 +20,13 @@ const Nav = ({ menuIsActive, setMenuIsActive }) => {
                 animate="enter"
                 exit="exit"
               >
-                <Link href={href} className="text-white">
+                <Link
+                  href={href}
+                  className="text-white"
+                  onClick={() => {
+                    setMenuIsActive(!menuIsActive);
+                  }}
+                >
                   <a className="text-sm text-white">{number}</a>
                   {title}
                 </Link>

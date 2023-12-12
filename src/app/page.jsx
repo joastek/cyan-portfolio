@@ -38,23 +38,25 @@ export default function Home() {
           {" "}
           <ParticleRing />
         </div>{" "}
-        <header className=" fixed  w-full z-50">
-          <div className="z-50">
-            {" "}
-            <Header
-              menuIsActive={menuIsActive}
-              setMenuIsActive={setMenuIsActive}
-            />{" "}
-          </div>
-
-          <div className="cursor-pointer  p-4 first-letter:flex">
-            <Image
-              src={Logo}
-              alt="portfolio Logo"
-              width={100}
-              height={100}
-              className="cursor-pointer z-50"
-            />
+        <header className=" fixed w-screen z-50 ">
+          <div className="   w-full  max-w-[80rem] mx-auto flex">
+            <div className="cursor-pointer flex-end flex">
+              <Link href="/" className="cursor-pointer flex-end ">
+                <Image
+                  src={Logo}
+                  alt="portfolio Logo"
+                  width={100}
+                  height={50}
+                  className="cursor-pointer z-50"
+                />
+              </Link>
+            </div>
+            <div className="    justify-end w-full">
+              <Header
+                menuIsActive={menuIsActive}
+                setMenuIsActive={setMenuIsActive}
+              />{" "}
+            </div>{" "}
           </div>
         </header>{" "}
         <main className="m-auto  h-screen ">

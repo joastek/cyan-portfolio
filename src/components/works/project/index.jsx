@@ -6,7 +6,7 @@ const Project = ({ index, title, setModal, description, link }) => {
       <Link href={`/works/${link}`}>
         {" "}
         <div
-          className="flex columns   cursor-pointer text-2xl border-b-2 border-white"
+          className="flex columns   cursor-pointer text-2xl border-b-[1px] border-white text-white mt-5"
           onMouseEnter={() => {
             setModal({ active: true, index: index });
           }}
