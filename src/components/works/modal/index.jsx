@@ -8,8 +8,8 @@ const scaleAnimation = {
 
   enter: {
     scale: 1,
-    x: "-50%",
-    y: "-50%",
+    x: "10%",
+    y: "-10%",
     transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
   },
 

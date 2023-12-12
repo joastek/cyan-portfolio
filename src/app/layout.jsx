@@ -1,9 +1,9 @@
-import { Chango } from "next/font/google";
+import { Kulim_Park } from "next/font/google";
 import "./globals.scss";
 import "bulma/css/bulma.css";
 import "@/styles/style.css";
 
-const inter = Chango({ subsets: ["latin"], weight: "400" });
+const inter = Kulim_Park({ subsets: ["latin"], weight: "400" });
 
 const metadata = {
   title: "CYAN - frontend portfolio",

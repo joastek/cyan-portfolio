@@ -7,6 +7,7 @@ import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import Header from "@/components/NavBar/Header";
 import BurgerHeader from "@/components/NavBar/BurgerHeader";
+import Link from "next/link";
 const Works = () => {
   const projects = [
     {
@@ -14,6 +15,7 @@ const Works = () => {
       src: "Logo.jpg",
       color: "#000000",
       description: "Desing & development",
+      link: "wwprint",
     },
 
     {
@@ -21,28 +23,37 @@ const Works = () => {
       src: "1.png",
       color: "#8C8C8C",
       description: "Desing & development",
+      link: "wytrenowaniApp",
     },
     {
       title: "Otoprzychodnie",
       src: "1.png",
       color: "#EFE8D3",
       description: "Desing & development",
+      link: "otoprzychodnie",
     },
   ];
   const [menuIsActive, setMenuIsActive] = useState(false);
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <>
-      <header className=" fixed w-screen z-50">
+      <header className=" fixed w-screen z-50 ">
         <div className="mr-6 ">
           <Header
             menuIsActive={menuIsActive}
             setMenuIsActive={setMenuIsActive}
           />{" "}
-        </div>
-
-        <div className="">
-          <Image src={Logo} alt="portfolio Logo" />
+        </div>{" "}
+        <div className="cursor-pointer flex">
+          <Link href="/" className="cursor-pointer flex p-4">
+            <Image
+              src={Logo}
+              alt="portfolio Logo"
+              width={100}
+              height={100}
+              className="cursor-pointer z-50"
+            />
+          </Link>
         </div>
       </header>{" "}
       {menuIsActive ? (
@@ -59,15 +70,17 @@ const Works = () => {
       ) : (
         <>
           {" "}
-          <main className="m-auto  h-screen flex ">
-            <div className=" mt-28   justify-center text-center m-auto">
+          <main className="  h-screen flex container">
+            <div className="  mt-[10rem] justify-center  w-full  max-w-[60rem] mx-auto ">
               <div className="space-y-12 ">
+                <h1 className="text-4xl uppercase mb-24">works</h1>
                 {projects.map((project, index) => {
                   return (
                     <Project
                       key={index}
                       index={index}
                       title={project.title}
+                      link={project.link}
                       description={project.description}
                       setModal={setModal}
                     />

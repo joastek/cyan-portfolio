@@ -8,8 +8,10 @@ import StickyCursor from "../components/cube/stickyCursor";
 import { MainAnim, perspective } from "@/components/NavBar/anim";
 import Header from "../components/NavBar/Header";
 import Loading from "@/components/loading";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import AnimatedTextWord from "@/components/animation/AnimatedMainText";
+
 export default function Home() {
   const stickyElement = useRef(null);
   const [menuIsActive, setMenuIsActive] = useState(false);
@@ -30,68 +32,78 @@ export default function Home() {
     </>
   ) : (
     <>
-      <StickyCursor stickyElement={stickyElement} />
-      <div className="absolute h-screen w-screen ">
-        {" "}
-        <ParticleRing />
-      </div>{" "}
-      <header className=" fixed  w-full">
-        <div className="">
+      <AnimatePresence>
+        <StickyCursor stickyElement={stickyElement} />
+        <div className="absolute h-screen w-screen ">
           {" "}
-          <Header
-            menuIsActive={menuIsActive}
-            setMenuIsActive={setMenuIsActive}
-          />{" "}
-        </div>
-
-        <div className="columns ">
-          <div className="column is-1">
-            <Image src={Logo} alt="portfolio Logo" />
+          <ParticleRing />
+        </div>{" "}
+        <header className=" fixed  w-full z-50">
+          <div className="z-50">
+            {" "}
+            <Header
+              menuIsActive={menuIsActive}
+              setMenuIsActive={setMenuIsActive}
+            />{" "}
           </div>
-        </div>
-      </header>{" "}
-      <main className="m-auto  h-screen ">
-        <div className="container h-full justify-center text-center m-auto">
-          {menuIsActive ? (
-            <>
-              <div className="w-full h-full">
-                <BurgerHeader
-                  menuIsActive={menuIsActive}
-                  setMenuIsActive={setMenuIsActive}
-                />
-              </div>
-            </>
-          ) : (
-            <>
-              {" "}
-              <motion.div
-                variants={MainAnim}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-              >
-                <div className=" mx-auto  ">
-                  <p className="pt-[30%] tracking-wide text-5xl   font-extrabold">
-                    Hellos, my name is Jan Czyszczoń
-                  </p>
-                  <p>Im a front-end developer !</p>
-                  <div className="mt-6">
-                    <div>
-                      <Link href="/about" alt="" className="curosor-pointer ">
+
+          <div className="cursor-pointer  p-4 first-letter:flex">
+            <Image
+              src={Logo}
+              alt="portfolio Logo"
+              width={100}
+              height={100}
+              className="cursor-pointer z-50"
+            />
+          </div>
+        </header>{" "}
+        <main className="m-auto  h-screen ">
+          <div className="container h-full justify-center text-center m-auto">
+            {menuIsActive ? (
+              <>
+                <div className="w-full h-full text-left">
+                  <BurgerHeader
+                    menuIsActive={menuIsActive}
+                    setMenuIsActive={setMenuIsActive}
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                {" "}
+                <div className="container">
+                  <div className=" mx-auto pt-[30%]  flex  flex-col">
+                    <p className=" tracking-wide text-5xl justify-center text-center font-extrabold mx-auto">
+                      <AnimatedTextWord text="Hello, my name is Jan Czyszczoń" />
+                    </p>
+                    <p className=" justify-center text-center mx-auto text-2xl">
+                      {" "}
+                      <AnimatedTextWord text="I'm a frontend developer" />
+                    </p>
+                    <div className="mt-6 block  justify-center text-center mx-auto text-2xl">
+                      <Link href="/works" alt="" className="curosor-pointer ">
                         {" "}
-                        <p>my projects</p>
+                        <p className=" justify-center text-center mx-auto text-2xl flex">
+                          {" "}
+                          <AnimatedTextWord text="my projects" />
+                        </p>
                       </Link>
-                    </div>
-                    <div>
-                      <p>something about me</p>
+
+                      <Link href="/works" alt="" className="curosor-pointer ">
+                        {" "}
+                        <p className=" justify-center text-center mx-auto text-lg flex">
+                          {" "}
+                          <AnimatedTextWord text="someting about me" />
+                        </p>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </>
-          )}
-        </div>
-      </main>
+              </>
+            )}
+          </div>
+        </main>
+      </AnimatePresence>
     </>
   );
 }
