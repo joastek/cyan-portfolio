@@ -72,7 +72,7 @@ export default function Home() {
               >
                 <div className=" mx-auto  ">
                   <p className="pt-[30%] tracking-wide text-5xl   font-extrabold">
-                    Hello, my name is Jan Czyszczoń
+                    Hellos, my name is Jan Czyszczoń
                   </p>
                   <p>Im a front-end developer !</p>
                   <div className="mt-6">
