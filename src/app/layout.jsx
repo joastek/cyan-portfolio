@@ -1,8 +1,8 @@
 import { Kulim_Park } from "next/font/google";
 import "./globals.scss";
 import "bulma/css/bulma.css";
-import "@/styles/style.css";
-
+import "@/styles/btn.css";
+import StickyCursor from "@/components/cube/stickyCursor";
 const inter = Kulim_Park({ subsets: ["latin"], weight: "400" });
 
 const metadata = {
@@ -21,7 +21,10 @@ export default function RootLayout({ children }) {
         {" "}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={inter.className}> {children}</body>
+      <body className={inter.className}>
+        {" "}
+        <StickyCursor /> {children}
+      </body>
     </html>
   );
 }

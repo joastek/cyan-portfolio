@@ -20,9 +20,7 @@ const Project = ({ index, title, setModal, description, link }) => {
           </div>
           <div className="column">
             {" "}
-            <h2 className="text-end justify-end flex-end flex">
-              {description}
-            </h2>
+            <h2 className="text-end justify-end ">{description}</h2>
           </div>{" "}
         </div>{" "}
       </Link>

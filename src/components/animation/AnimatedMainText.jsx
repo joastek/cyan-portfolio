@@ -42,6 +42,7 @@ const AnimatedTextWord = ({ text }) => {
       variants={container}
       initial="hidden"
       animate="visible"
+      className="text-center justify-center curosor-pointer"
     >
       {words.map((word, index) => (
         <motion.span
