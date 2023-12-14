@@ -17,7 +17,7 @@ const Works = () => {
       number: "01",
       title: "WWPrint",
       src: "Logo.jpg",
-      color: "#000000",
+      color: "#0044ff",
       description: "Desing & development",
       link: "wwprint",
     },
@@ -26,7 +26,7 @@ const Works = () => {
       number: "02",
       title: "WytrenowaniApp",
       src: "1.png",
-      color: "#8C8C8C",
+      color: "#8f51ea",
       description: "Desing & development",
       link: "wytrenowaniApp",
     },
@@ -34,7 +34,7 @@ const Works = () => {
       number: "03",
       title: "Otoprzychodnie",
       src: "1.png",
-      color: "#EFE8D3",
+      color: "#fe53bb",
       description: "Desing & development",
       link: "otoprzychodnie",
     },
@@ -82,7 +82,7 @@ const Works = () => {
       ) : (
         <>
           {" "}
-          <main className="  h-screen flex container is-fluid backdrop-blur-sm">
+          <main className="  h-screen flex container is-fluid backdrop-blur-[1.5px]">
             <div className="  mt-[10rem] justify-center  w-full  max-w-[60rem] mx-auto ">
               <div className="space-y-12 ">
                 <motion.h1

@@ -9,7 +9,7 @@ export default function BurgerHeader({ menuIsActive, setMenuIsActive }) {
   return (
     <>
       <motion.div
-        className="   backdrop-blur-sm w-full h-full  "
+        className="   backdrop-blur-sm h-full  "
         variants={anim}
         initial="initial"
         animate={menuIsActive ? "open" : "exit"}

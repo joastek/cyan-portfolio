@@ -58,11 +58,11 @@ export default function Home() {
           </div>{" "}
         </div>
       </header>{" "}
-      <main className="m-auto  h-screen z-50">
-        <div className="container h-full justify-center text-center m-auto">
+      <main className=" h-screen z-50 w-screen">
+        <div className="container is-fluid h-full w-screen justify-center text-center ">
           {menuIsActive ? (
             <>
-              <div className="w-full h-full text-left">
+              <div className="w-screen h-full text-left">
                 <BurgerHeader
                   menuIsActive={menuIsActive}
                   setMenuIsActive={setMenuIsActive}
@@ -74,24 +74,16 @@ export default function Home() {
               {" "}
               <div className="container">
                 <div className=" pt-[30%]  mx-auto   flex  flex-col justify-center text-center items-center">
-                  {/* <p className=" tracking-wide text-5xl  max-sm:text-2xl font-extrabold">
-                    <AnimatedTextWord text="Hello, my name is Jan Czyszczoń " />
-                  </p>
-                  <p className=" text-2xl  max-sm:text-lg">
-                    {" "}
-                    <AnimatedTextWord text="I'm a frontend developer" />
-                  </p> */}
-
                   <motion.h1
                     initial="hidden"
                     animate="visible"
                     exit="exit"
                     variants={MainAnim}
-                    className="text-5xl flex"
+                    className="text-7xl flex stroke-black"
                     custom={0}
                   >
                     Hello, my name is
-                    <p className="text-purple font-extrabold">Jan Czyszczoń</p>
+                    <p className="strokeMain font-extrabold">Jan Czyszczoń</p>
                   </motion.h1>
 
                   <motion.h2
@@ -99,10 +91,12 @@ export default function Home() {
                     animate="visible"
                     exit="exit"
                     variants={MainAnim}
-                    className="text-3xl"
+                    className="text-2xl flex "
                     custom={1}
                   >
-                    Im a frontend developer
+                    <p className="">{` I'm passionate `}</p>
+
+                    <p className=" stroke font-extrabold">frontend developer</p>
                   </motion.h2>
                   <div className="mt-6 block  justify-center text-center mx-auto text-2xl max-sm:text-lg">
                     <motion.div

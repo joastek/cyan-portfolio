@@ -1,14 +1,12 @@
 const MIN_RADIUS = 7.5;
 const MAX_RADIUS = 15;
 const DEPTH = 2;
-const LEFT_COLOR = "8f51ea";
-const RIGHT_COLOR = "fe53bb";
-const CENTER_COLOR = "0044ff";
+const LEFT_COLOR = "fe53bb";
+const RIGHT_COLOR = "8f51ea";
+
 const NUM_POINTS = 1500;
 
 const getGradientStop = (ratio) => {
-  // For outer ring numbers potentially past max radius,
-  // just clamp to 0
   ratio = ratio > 1 ? 1 : ratio < 0 ? 0 : ratio;
 
   const c0 = LEFT_COLOR.match(/.{1,2}/g).map(
@@ -17,9 +15,7 @@ const getGradientStop = (ratio) => {
   const c1 = RIGHT_COLOR.match(/.{1,2}/g).map(
     (oct) => parseInt(oct, 16) * ratio
   );
-  const c2 = CENTER_COLOR.match(/.{1,2}/g).map(
-    (oct) => parseInt(oct, 16) * (1 - Math.abs(ratio - 0.5) * 2)
-  );
+
   const ci = [0, 1, 2].map((i) => Math.min(Math.round(c0[i] + c1[i]), 255));
   const color = ci
     .reduce((a, v) => (a << 8) + v, 0)

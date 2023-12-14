@@ -15,8 +15,8 @@ const SubPageBacground = () => {
         className="bg-slate-900"
       >
         <OrbitControls
-          maxDistance={30}
-          minDistance={30}
+          maxDistance={60}
+          minDistance={60}
           enableRotate={false}
           enableZoom={false}
         />

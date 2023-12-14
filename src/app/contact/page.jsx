@@ -63,7 +63,7 @@ const Contact = () => {
       ) : (
         <>
           {" "}
-          <main className="h-screen flex container is-fluid backdrop-blur-sm">
+          <main className="h-screen flex container is-fluid backdrop-blur-[1.5px]">
             <div className=" mt-[10rem] w-full  max-w-[60rem] mx-auto   ">
               <motion.h1
                 initial="hidden"

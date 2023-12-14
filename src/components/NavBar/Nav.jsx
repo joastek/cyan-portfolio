@@ -22,7 +22,7 @@ const Nav = ({ menuIsActive, setMenuIsActive }) => {
               >
                 <Link
                   href={href}
-                  className="text-white"
+                  className="strokeMain font-extrabold"
                   onClick={() => {
                     setMenuIsActive(!menuIsActive);
                   }}

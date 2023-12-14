@@ -40,8 +40,8 @@ const ParticleRing = () => {
         className="bg-slate-900"
       >
         <OrbitControls
-          maxDistance={30}
-          minDistance={30}
+          maxDistance={60}
+          minDistance={60}
           enableRotate={false}
           enableZoom={false}
         />
@@ -59,7 +59,6 @@ const ParticleRing = () => {
 };
 
 const PointCircle = ({ groupRef, rotationX, rotationY }) => {
-  const ref = useRef(null);
   useFrame(({ clock }) => {
     if (groupRef.current) {
       groupRef.current.rotation.x = rotationX.get();
@@ -72,7 +71,7 @@ const PointCircle = ({ groupRef, rotationX, rotationY }) => {
 
   return (
     <>
-      <group ref={groupRef}>
+      <group ref={groupRef} position={[0, -25, 0]}>
         {pointsInner.map((point) => (
           <mesh key={point.idx}>
             <Point color={point.color} position={point.position} />
