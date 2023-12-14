@@ -9,9 +9,12 @@ import Header from "@/components/NavBar/Header";
 import BurgerHeader from "@/components/NavBar/BurgerHeader";
 import Link from "next/link";
 import SubPageBacground from "@/components/cube/SubpageBacground";
+import { motion } from "framer-motion";
+import { MainAnim } from "@/components/NavBar/anim";
 const Works = () => {
   const projects = [
     {
+      number: "01",
       title: "WWPrint",
       src: "Logo.jpg",
       color: "#000000",
@@ -20,6 +23,7 @@ const Works = () => {
     },
 
     {
+      number: "02",
       title: "WytrenowaniApp",
       src: "1.png",
       color: "#8C8C8C",
@@ -27,6 +31,7 @@ const Works = () => {
       link: "wytrenowaniApp",
     },
     {
+      number: "03",
       title: "Otoprzychodnie",
       src: "1.png",
       color: "#EFE8D3",
@@ -38,7 +43,7 @@ const Works = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <>
-      <div className="absolute h-screen w-screen">
+      <div className="absolute h-full w-full">
         {" "}
         <SubPageBacground />
       </div>{" "}
@@ -80,18 +85,36 @@ const Works = () => {
           <main className="  h-screen flex container is-fluid backdrop-blur-sm">
             <div className="  mt-[10rem] justify-center  w-full  max-w-[60rem] mx-auto ">
               <div className="space-y-12 ">
-                <h1 className="text-4xl uppercase mb-24">works</h1>
+                <motion.h1
+                  custom={0}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={MainAnim}
+                  className="text-4xl uppercase mb-24 border-b-2 border-purple pb-4"
+                >
+                  works
+                </motion.h1>
 
                 {projects.map((project, index) => {
                   return (
-                    <Project
+                    <motion.div
                       key={index}
-                      index={index}
-                      title={project.title}
-                      link={project.link}
-                      description={project.description}
-                      setModal={setModal}
-                    />
+                      custom={index}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={MainAnim}
+                    >
+                      <Project
+                        index={index}
+                        title={project.title}
+                        link={project.link}
+                        description={project.description}
+                        number={project.number}
+                        setModal={setModal}
+                      />
+                    </motion.div>
                   );
                 })}
               </div>

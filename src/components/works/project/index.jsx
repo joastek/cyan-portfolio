@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-const Project = ({ index, title, setModal, description, link }) => {
+const Project = ({ index, title, setModal, description, link, number }) => {
   return (
     <>
       <Link href={`/works/${link}`}>
         {" "}
         <div
-          className="flex columns   cursor-pointer text-2xl border-b-[1px] border-white text-white mt-5"
+          className="flex columns   cursor-pointer text-2xl text-white mt-5"
           onMouseEnter={() => {
             setModal({ active: true, index: index });
           }}
@@ -16,7 +16,14 @@ const Project = ({ index, title, setModal, description, link }) => {
           }}
         >
           <div className="column ">
-            <h1 className="text-start">{title}</h1>
+            <div className="text-2xl ">
+              <p className="text-sm mr-2 align-baseline  inline-block">
+                {" "}
+                {number}{" "}
+              </p>
+              <h2 className=" align-bottom  inline-block">{title}</h2>
+            </div>
+            <h1 className=""></h1>
           </div>
           <div className="column">
             {" "}

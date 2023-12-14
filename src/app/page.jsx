@@ -4,11 +4,11 @@ import Image from "next/image";
 import Logo from "../../public/logo.png";
 import ParticleRing from "../components/cube/MainBacground";
 import BurgerHeader from "../components/NavBar/BurgerHeader";
-import StickyCursor from "../components/cube/stickyCursor";
-import { MainAnim, perspective } from "@/components/NavBar/anim";
+
+import { MainAnim } from "@/components/NavBar/anim";
 import Header from "../components/NavBar/Header";
 import Loading from "@/app/loading";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import AnimatedTextWord from "@/components/animation/AnimatedMainText";
 
@@ -73,16 +73,45 @@ export default function Home() {
             <>
               {" "}
               <div className="container">
-                <div className=" pt-[30%]  mx-auto   flex  flex-col ">
-                  <p className=" tracking-wide text-5xl  max-sm:text-2xl font-extrabold">
+                <div className=" pt-[30%]  mx-auto   flex  flex-col justify-center text-center items-center">
+                  {/* <p className=" tracking-wide text-5xl  max-sm:text-2xl font-extrabold">
                     <AnimatedTextWord text="Hello, my name is Jan Czyszczoń " />
                   </p>
                   <p className=" text-2xl  max-sm:text-lg">
                     {" "}
                     <AnimatedTextWord text="I'm a frontend developer" />
-                  </p>
+                  </p> */}
+
+                  <motion.h1
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    variants={MainAnim}
+                    className="text-5xl flex"
+                    custom={0}
+                  >
+                    Hello, my name is
+                    <p className="text-purple font-extrabold">Jan Czyszczoń</p>
+                  </motion.h1>
+
+                  <motion.h2
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    variants={MainAnim}
+                    className="text-3xl"
+                    custom={1}
+                  >
+                    Im a frontend developer
+                  </motion.h2>
                   <div className="mt-6 block  justify-center text-center mx-auto text-2xl max-sm:text-lg">
-                    <div>
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={MainAnim}
+                      custom={2}
+                    >
                       <Link href="/works" alt="" className="curosor-pointer ">
                         <button className="btn" type="button">
                           <strong className="text-white">my works</strong>
@@ -96,8 +125,15 @@ export default function Home() {
                           </div>
                         </button>
                       </Link>
-                    </div>{" "}
-                    <div className="mt-4">
+                    </motion.div>{" "}
+                    <motion.div
+                      className="mt-4"
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={MainAnim}
+                      custom={3}
+                    >
                       {" "}
                       <Link href="/works" alt="" className="curosor-pointer ">
                         {" "}
@@ -113,7 +149,7 @@ export default function Home() {
                           </div>
                         </button>
                       </Link>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>

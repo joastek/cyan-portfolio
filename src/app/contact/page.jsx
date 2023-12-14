@@ -7,9 +7,21 @@ import Header from "@/components/NavBar/Header";
 import BurgerHeader from "@/components/NavBar/BurgerHeader";
 import Link from "next/link";
 import SubPageBacground from "@/components/cube/SubpageBacground";
-
+import { motion } from "framer-motion";
+import { MainAnim } from "@/components/NavBar/anim";
 const Contact = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
+  const contact = [
+    {
+      media: "github",
+      link: "https://github.com/joastek",
+    },
+    { media: "linkedIn", link: "https://www.linkedin.com/in/czyszczonjan/" },
+    {
+      media: "facebook",
+      link: "https://www.facebook.com/jan.czyszczon.31",
+    },
+  ];
   return (
     <>
       <div className="absolute h-screen w-screen">
@@ -53,50 +65,82 @@ const Contact = () => {
           {" "}
           <main className="h-screen flex container is-fluid backdrop-blur-sm">
             <div className=" mt-[10rem] w-full  max-w-[60rem] mx-auto   ">
-              <h1 className="uppercase text-4xl border-b-2 border-purple font-bold ">
+              <motion.h1
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={MainAnim}
+                custom={0}
+                className="uppercase text-4xl border-b-2 border-purple font-bold "
+              >
                 contact{" "}
-              </h1>
+              </motion.h1>
               <div className="columns">
                 <div className="column">
-                  <div className="flex ">
-                    <h3 className="column uppercase  is-7 font-semibold">
+                  <div className="flex">
+                    <motion.h3
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={MainAnim}
+                      custom={1}
+                      className="column uppercase  is-7 font-semibold"
+                    >
                       social media
-                    </h3>
-                    <div className="column is-4 mr-4 ">
-                      <Link
-                        href="https://github.com/joastek"
-                        className="block text-white"
-                      >
-                        github
-                      </Link>{" "}
-                      <Link
-                        href="https://www.linkedin.com/in/czyszczonjan/"
-                        className="block text-white"
-                      >
-                        LinkedIn
-                      </Link>{" "}
-                      <Link
-                        href="https://www.facebook.com/jan.czyszczon.31"
-                        className="text-white"
-                      >
-                        facebook
-                      </Link>
+                    </motion.h3>{" "}
+                    <div className=" column">
+                      {contact.map((contact, i) => {
+                        return (
+                          <>
+                            <motion.div
+                              initial="hidden"
+                              animate="visible"
+                              exit="exit"
+                              variants={MainAnim}
+                              custom={i}
+                              key={i}
+                              className=""
+                            >
+                              <Link
+                                href={contact.link}
+                                className="block text-white"
+                              >
+                                {contact.media}
+                              </Link>{" "}
+                            </motion.div>
+                          </>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
                 <div className="column">
                   <div className="flex ">
-                    <h3 className="column uppercase is-2 font-semibold">
+                    <motion.h3
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={MainAnim}
+                      custom={1}
+                      className="column uppercase is-2 font-semibold"
+                    >
                       mail
-                    </h3>
-                    <div className="column is-6 mr-4">
+                    </motion.h3>
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={MainAnim}
+                      custom={1}
+                      className="column is-6 mr-4"
+                    >
                       <Link
                         href="mailto:czyszczon.jan99@gmail.com"
                         className="text-white"
                       >
                         czyszczon.jan99@gmail.com
                       </Link>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>
