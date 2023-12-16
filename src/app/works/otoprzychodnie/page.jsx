@@ -49,7 +49,7 @@ const Otoprzychodnie = () => {
       ) : (
         <>
           {" "}
-          <main className="container h-screen is-fluid backdrop-blur-sm">
+          <main className="container h-screen is-fluid backdrop-blur-sm pt-24">
             <div className=" max-w-[60rem] mx-auto  justify-center">
               <div className="w-full mx-auto flex justify-center ">
                 {" "}

@@ -84,14 +84,14 @@ const Works = () => {
           {" "}
           <main className="  h-screen flex container is-fluid backdrop-blur-[1.5px]">
             <div className="  mt-[10rem] justify-center  w-full  max-w-[60rem] mx-auto ">
-              <div className="space-y-12 ">
+              <div className="space-y-8 ">
                 <motion.h1
                   custom={0}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
                   variants={MainAnim}
-                  className="text-4xl uppercase mb-24 border-b-2 border-purple pb-4"
+                  className="text-4xl uppercase mb-24 border-b-2 border-pink pb-4 text-pink mrRobot"
                 >
                   works
                 </motion.h1>

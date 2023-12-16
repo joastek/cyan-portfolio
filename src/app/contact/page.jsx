@@ -71,7 +71,7 @@ const Contact = () => {
                 exit="exit"
                 variants={MainAnim}
                 custom={0}
-                className="uppercase text-4xl border-b-2 border-purple font-bold "
+                className="uppercase text-4xl border-b-2 border-pink text-pink mrRobot "
               >
                 contact{" "}
               </motion.h1>

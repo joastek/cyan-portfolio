@@ -1,6 +1,6 @@
 export default function Header({ menuIsActive, setMenuIsActive }) {
   return (
-    <div className="header ">
+    <div className="header cursor-pointer">
       <button>
         <div
           onClick={() => {
@@ -11,7 +11,7 @@ export default function Header({ menuIsActive, setMenuIsActive }) {
           <div
             className={`${"burger"} ${
               menuIsActive ? "burgerActive" : ""
-            } w-6 h-6`}
+            } w-2 h-6`}
           />
         </div>
       </button>

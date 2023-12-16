@@ -21,10 +21,8 @@ const ParticleRing = () => {
   };
 
   useEffect(() => {
-    // Dodaj obsługę zdarzenia ruchu myszy
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Usuń nasłuchiwanie zdarzenia po odmontowaniu komponentu
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };

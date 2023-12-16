@@ -10,10 +10,10 @@ import Header from "../components/NavBar/Header";
 import Loading from "@/app/loading";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import AnimatedTextWord from "@/components/animation/AnimatedMainText";
+
+import MainButton from "@/components/MainButton";
 
 export default function Home() {
-  const stickyElement = useRef(null);
   const [menuIsActive, setMenuIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -58,67 +58,57 @@ export default function Home() {
           </div>{" "}
         </div>
       </header>{" "}
-      <main className=" h-screen z-50 w-screen">
-        <div className="container is-fluid h-full w-screen justify-center text-center ">
-          {menuIsActive ? (
-            <>
-              <div className="w-screen h-full text-left">
-                <BurgerHeader
-                  menuIsActive={menuIsActive}
-                  setMenuIsActive={setMenuIsActive}
-                />
-              </div>
-            </>
-          ) : (
-            <>
-              {" "}
-              <div className="container">
-                <div className=" pt-[30%]  mx-auto   flex  flex-col justify-center text-center items-center">
-                  <motion.h1
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    variants={MainAnim}
-                    className="text-7xl flex stroke-black"
-                    custom={0}
-                  >
-                    Hello, my name is
-                    <p className="strokeMain font-extrabold">Jan Czyszczoń</p>
-                  </motion.h1>
+      <main className=" h-full z-50 w-screen">
+        {menuIsActive ? (
+          <>
+            <div className="w-screen h-full ">
+              <BurgerHeader
+                menuIsActive={menuIsActive}
+                setMenuIsActive={setMenuIsActive}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="container is-fluid h-full w-screen  ">
+              <div className=" h-full w-full  justify-center text-center   m-auto flex flex-col space-y-[1rem]">
+                <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={MainAnim}
+                  className="text-5xl    justify-center text-center items-center flex max-sm:block"
+                  custom={0}
+                >
+                  <h1 className="max-sm:block font-extrabold max-sm:mb-2">
+                    Hello, my name is{" "}
+                  </h1>
+                  <div className="max-sm:hidden">{"\u00A0"}</div>
 
-                  <motion.h2
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    variants={MainAnim}
-                    className="text-2xl flex "
-                    custom={1}
-                  >
-                    <p className="">{` I'm passionate `}</p>
+                  <h1 className="text-pink mrRobot"> Jan Czyszczon</h1>
+                </motion.div>
 
-                    <p className=" stroke font-extrabold">frontend developer</p>
-                  </motion.h2>
-                  <div className="mt-6 block  justify-center text-center mx-auto text-2xl max-sm:text-lg">
+                <motion.h2
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={MainAnim}
+                  className="text-2xl flex   justify-center text-center items-center"
+                  custom={1}
+                >
+                  <p className="">{` I'm passionate front-end developer, based in Cracow. `}</p>
+                </motion.h2>
+                <div className="mt-6   text-2xl max-sm:text-lg ">
+                  <div>
                     <motion.div
                       initial="hidden"
                       animate="visible"
                       exit="exit"
                       variants={MainAnim}
                       custom={2}
+                      className=" justify-center text-center items-center "
                     >
-                      <Link href="/works" alt="" className="curosor-pointer ">
-                        <button className="btn" type="button">
-                          <strong className="text-white">my works</strong>
-                          <div id="container-stars">
-                            <div id="stars"></div>
-                          </div>
-
-                          <div id="glow">
-                            <div className="circle"></div>
-                            <div className="circle"></div>
-                          </div>
-                        </button>
-                      </Link>
+                      <MainButton text="my works" href="/works" />
                     </motion.div>{" "}
                     <motion.div
                       className="mt-4"
@@ -128,28 +118,14 @@ export default function Home() {
                       variants={MainAnim}
                       custom={3}
                     >
-                      {" "}
-                      <Link href="/works" alt="" className="curosor-pointer ">
-                        {" "}
-                        <button className="btn" type="button">
-                          <strong className="text-white">about me</strong>
-                          <div id="container-stars">
-                            <div id="stars"></div>
-                          </div>
-
-                          <div id="glow">
-                            <div className="circle"></div>
-                            <div className="circle"></div>
-                          </div>
-                        </button>
-                      </Link>
+                      <MainButton text="about" href="/about" />
                     </motion.div>
                   </div>
                 </div>
-              </div>
-            </>
-          )}
-        </div>
+              </div>{" "}
+            </div>
+          </>
+        )}
       </main>
     </>
   );

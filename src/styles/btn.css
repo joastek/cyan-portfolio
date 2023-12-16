@@ -1,7 +1,4 @@
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 13rem;
   overflow: hidden;
   height: 3rem;

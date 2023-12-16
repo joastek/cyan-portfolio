@@ -22,12 +22,12 @@ const Nav = ({ menuIsActive, setMenuIsActive }) => {
               >
                 <Link
                   href={href}
-                  className="strokeMain font-extrabold"
+                  className="mrRobot text-pink"
                   onClick={() => {
                     setMenuIsActive(!menuIsActive);
                   }}
                 >
-                  <a className="text-sm text-white">{number}</a>
+                  <a className="text-sm text-pink mr-2">{number}</a>
                   {title}
                 </Link>
               </motion.div>

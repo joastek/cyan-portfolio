@@ -65,7 +65,7 @@ const About = () => {
         <>
           <main className="h-screen w-screen flex container is-fluid backdrop-blur-[1.5px]">
             <div className=" mt-[10rem] w-full  max-w-[60rem] mx-auto   ">
-              <h1 className="uppercase text-4xl border-b-2 border-white">
+              <h1 className="uppercase text-4xl border-b-2 border-pink text-pink mrRobot">
                 about{" "}
               </h1>
               <button onClick={onButtonClick}>Download PDF</button>

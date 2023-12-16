@@ -80,7 +80,7 @@ export default function ModalProject({ modal, project }) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        className="absolute h-[550px] w-[500px] pointer-events-none  flex overflow-hidden rounded-3xl"
+        className="absolute h-[550px] w-[500px] pointer-events-none  flex overflow-hidden rounded-3xl max-sm:hidden"
       >
         <div style={{ top: index * -100 + "%" }} className={"modalSlider"}>
           {project.map((project, index) => {

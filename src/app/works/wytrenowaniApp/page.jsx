@@ -48,7 +48,7 @@ const WytrenowaniApp = () => {
         </>
       ) : (
         <>
-          <main className="container is-fluid backdrop-blur-sm h-screen">
+          <main className="container is-fluid backdrop-blur-sm h-screen pt-24">
             <div className=" max-w-[60rem] mx-auto  justify-center">
               <div className="w-full mx-auto flex justify-center ">
                 {" "}
