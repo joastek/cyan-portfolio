@@ -77,10 +77,10 @@ export default function Home() {
                   animate="visible"
                   exit="exit"
                   variants={MainAnim}
-                  className="text-5xl    justify-center text-center items-center flex max-sm:block"
+                  className="text-5xl    justify-center text-center items-center flex max-sm:block max-sm:text-4xl "
                   custom={0}
                 >
-                  <h1 className="max-sm:block font-extrabold max-sm:mb-2">
+                  <h1 className="font-extrabold max-sm:mb-2 max-sm:block ">
                     Hello, my name is{" "}
                   </h1>
                   <div className="max-sm:hidden">{"\u00A0"}</div>
@@ -93,7 +93,7 @@ export default function Home() {
                   animate="visible"
                   exit="exit"
                   variants={MainAnim}
-                  className="text-2xl flex   justify-center text-center items-center"
+                  className="text-2xl flex   justify-center text-center items-center max-sm:text-xl"
                   custom={1}
                 >
                   <p className="">{` I'm passionate front-end developer, based in Cracow. `}</p>
