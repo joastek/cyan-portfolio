@@ -129,3 +129,18 @@ body::-webkit-scrollbar {
 .modal img {
   height: auto;
 }
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8f51ea;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fe53bb;
+}

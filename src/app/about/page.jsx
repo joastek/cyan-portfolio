@@ -3,11 +3,12 @@ import React from "react";
 import { useState } from "react";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
+import backgroundImage from "../../../public/Ellipse.png";
 import Header from "@/components/NavBar/Header";
 import BurgerHeader from "@/components/NavBar/BurgerHeader";
 import Link from "next/link";
 import SubPageBacground from "@/components/cube/SubpageBacground";
-
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const About = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
   const onButtonClick = () => {
@@ -68,7 +69,31 @@ const About = () => {
               <h1 className="uppercase text-4xl border-b-2 border-pink text-pink mrRobot">
                 about{" "}
               </h1>
-              <button onClick={onButtonClick}>Download PDF</button>
+              <div className="columns mt-4">
+                <div className="column">
+                  <Image
+                    src={backgroundImage}
+                    alt="backgorund image"
+                    className="px-16"
+                  />
+                </div>
+                <div className="column">
+                  {" "}
+                  <p>
+                    Young and ambitious front-end developer eager for
+                    freshopportunities to elevate my skills in FrontEnd. During
+                    myfree time, I am dedicated to expanding my expertise
+                    andhoning my skills in healthy nutrition,
+                    powerlifting,running, and delving into historical pursuits
+                  </p>{" "}
+                  <button
+                    onClick={onButtonClick}
+                    className="mt-4 border-b-2 border-purple"
+                  >
+                    resume <ExpandMoreIcon />
+                  </button>
+                </div>
+              </div>
             </div>
           </main>
         </>

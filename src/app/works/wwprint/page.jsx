@@ -6,6 +6,8 @@ import Header from "@/components/NavBar/Header";
 import BurgerHeader from "@/components/NavBar/BurgerHeader";
 import Link from "next/link";
 import SubPageBacground from "@/components/cube/SubpageBacground";
+import MainBlack from "../../../../public/assets/wwprint/MainBlack.png";
+import MainWhite from "../../../../public/assets/wwprint/MainWhite.png";
 const WWprint = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
   return (
@@ -48,7 +50,7 @@ const WWprint = () => {
         </>
       ) : (
         <>
-          <main className="container is-fluid backdrop-blur-sm h-screen pt-24">
+          <main className="container is-fluid backdrop-blur-[1px] h-screen pt-24 overflow-auto">
             <div className=" max-w-[60rem] mx-auto  justify-center">
               <div className="w-full mx-auto flex justify-center ">
                 {" "}
@@ -83,6 +85,26 @@ const WWprint = () => {
                     itp.{" "}
                   </div>
                 </div>
+              </div>
+              <div className="w-full mx-auto flex justify-center ">
+                {" "}
+                <Image
+                  src={MainWhite}
+                  alt="wwprint main photo"
+                  width={800}
+                  height={800}
+                  className="rounded-lg m-6"
+                />
+              </div>
+              <div className="w-full mx-auto flex justify-center ">
+                {" "}
+                <Image
+                  src={MainBlack}
+                  alt="wwprint main photo"
+                  width={800}
+                  height={800}
+                  className="rounded-lg m-6"
+                />
               </div>
             </div>
           </main>

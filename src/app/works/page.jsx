@@ -16,7 +16,7 @@ const Works = () => {
     {
       number: "01",
       title: "WWPrint",
-      src: "Logo.jpg",
+      src: "wwprintLogo.jpg",
       color: "#0044ff",
       description: "Desing & development",
       link: "wwprint",
@@ -25,7 +25,7 @@ const Works = () => {
     {
       number: "02",
       title: "WytrenowaniApp",
-      src: "1.png",
+      src: "otoprzychodnieLogo.png",
       color: "#8f51ea",
       description: "Desing & development",
       link: "wytrenowaniApp",
