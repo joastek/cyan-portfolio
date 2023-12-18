@@ -43,7 +43,7 @@ export const MainAnim = {
 
     translateY: "0%",
     transition: {
-      delay: 1 + i * 0.8,
+      delay: 1 + i * 0.15,
       duration: 0.7,
       ease: "easeIn",
       damping: 12,
