@@ -40,12 +40,18 @@ export const MainAnim = {
   hidden: { opacity: 0, translateY: "50%" },
   visible: (i) => ({
     opacity: 1,
+
     translateY: "0%",
-    transition: { delay: 1 + i * 0.4, duration: 1, ease: "easeIn" },
+    transition: {
+      delay: 1 + i * 0.8,
+      duration: 0.7,
+      ease: "easeIn",
+      damping: 12,
+    },
   }),
   exit: {
     opacity: 0,
     translateY: "0%",
-    transition: { duration: 2, ease: "easeInOut" },
+    transition: { duration: 2, ease: "easeInOut", damping: 22 },
   },
 };

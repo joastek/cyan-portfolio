@@ -3,12 +3,14 @@ import React from "react";
 import { useState } from "react";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
-import backgroundImage from "../../../public/Ellipse.png";
+import profile from "../../../public/profile.png";
 import Header from "@/components/NavBar/Header";
 import BurgerHeader from "@/components/NavBar/BurgerHeader";
 import Link from "next/link";
 import SubPageBacground from "@/components/cube/SubpageBacground";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { MainAnim } from "@/components/NavBar/anim";
+import { motion } from "framer-motion";
 const About = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
   const onButtonClick = () => {
@@ -18,7 +20,7 @@ const About = () => {
 
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "Resume.pdf";
+        alink.download = "Czyszczon_Jan_Curricum_Vitae.pdf";
         alink.click();
       });
     });
@@ -66,33 +68,50 @@ const About = () => {
         <>
           <main className="h-screen w-screen flex container is-fluid backdrop-blur-[1.5px]">
             <div className=" mt-[10rem] w-full  max-w-[60rem] mx-auto   ">
-              <h1 className="uppercase text-4xl border-b-2 border-pink text-pink mrRobot">
+              <motion.h1
+                className="uppercase text-4xl border-b-2 border-pink text-pink mrRobot"
+                custom={0}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={MainAnim}
+              >
                 about{" "}
-              </h1>
+              </motion.h1>
               <div className="columns mt-4">
-                <div className="column">
+                <motion.div
+                  className="column"
+                  custom={1}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={MainAnim}
+                >
                   <Image
-                    src={backgroundImage}
+                    src={profile}
                     alt="backgorund image"
                     className="px-16"
                   />
-                </div>
-                <div className="column">
+                </motion.div>
+                <motion.div
+                  className="column"
+                  custom={1}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={MainAnim}
+                >
                   {" "}
-                  <p>
-                    Young and ambitious front-end developer eager for
-                    freshopportunities to elevate my skills in FrontEnd. During
-                    myfree time, I am dedicated to expanding my expertise
-                    andhoning my skills in healthy nutrition,
-                    powerlifting,running, and delving into historical pursuits
+                  <p className="text-xl tracking-wider">
+                    {`  Hello, I'm Jan Czyszczoń from Kraków. I'm a young and highly ambitious front-end developer actively exploring new skills in the field. In my free time, I focus on honing my front-end skills, aiming to code faster and with better quality, while constantly seeking new design inspiration. I am also passionate about understanding human movement, mobility, and powerlifting. Additionally, I have a keen interest in history.`}
                   </p>{" "}
                   <button
                     onClick={onButtonClick}
-                    className="mt-4 border-b-2 border-purple"
+                    className="mt-7 border-b-4 text-xl border-purple cursor-pointer font-bold"
                   >
                     resume <ExpandMoreIcon />
                   </button>
-                </div>
+                </motion.div>
               </div>
             </div>
           </main>

@@ -3,6 +3,7 @@ import "./globals.scss";
 import "bulma/css/bulma.css";
 import "@/styles/btn.css";
 import StickyCursor from "@/components/cube/stickyCursor";
+
 const inter = Roboto({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {

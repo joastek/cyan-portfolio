@@ -15,6 +15,14 @@ const Works = () => {
   const projects = [
     {
       number: "01",
+      title: "Otoprzychodnie",
+      src: "otoprzychodnieLogo.png",
+      color: "#fe53bb",
+      description: "Front-end developer",
+      link: "otoprzychodnie",
+    },
+    {
+      number: "02",
       title: "WWPrint",
       src: "wwprintLogo.jpg",
       color: "#0044ff",
@@ -23,17 +31,18 @@ const Works = () => {
     },
 
     {
-      number: "02",
+      number: "03",
       title: "WytrenowaniApp",
       src: "otoprzychodnieLogo.png",
       color: "#8f51ea",
       description: "Desing & development",
       link: "wytrenowaniApp",
     },
+
     {
-      number: "03",
-      title: "Otoprzychodnie",
-      src: "1.png",
+      number: "04",
+      title: "cyandev",
+      src: "cyandevLogo.png",
       color: "#fe53bb",
       description: "Desing & development",
       link: "otoprzychodnie",

@@ -63,44 +63,26 @@ const WWprint = () => {
                 />
               </div>
               <div className="mx-16 ">
-                <h1 className="text-3xl border-b-4 border-purple pb-4 t font-bold">
+                <h1 className="text-3xl border-b-2 border-white pb-4">
                   WWPrint
                 </h1>
-                <div className="columns text-xl ">
+                <div className="columns">
                   <div className="column ">
                     <div className="flex ">
                       <h3 className="column uppercase is-offset-1">category</h3>
-                      <div className="column is-5 ">Front-end developer</div>
-                    </div>
-                    <div className="flex mt-12 ">
-                      <h3 className="column uppercase is-offset-1  ">
-                        <Link
-                          href="https://otoprzychodnie.pl/"
-                          className="text-white border-b-2 border-pink p-2"
-                        >
-                          demo
-                        </Link>{" "}
-                      </h3>
-                      <h3 className="column uppercase is-6  ">
-                        <Link
-                          href="https://github.com/joastek/WWPRINT"
-                          className="text-white border-b-2 border-pink p-2"
-                        >
-                          respository
-                        </Link>{" "}
-                      </h3>
+                      <div className="column is-4 mr-4">
+                        Branding UX/UI Design Web Development
+                      </div>
                     </div>
                   </div>
                   <div className="column">
-                    <p className="mt-3">
-                      {" "}
-                      Passionately crafting and advancing comprehensive code
-                      structures, I, as the author of both design and code, am
-                      dedicated to discerning client requirements and
-                      cultivating strong relationships. Elevating user
-                      experiences is my forte, achieved through the creation of
-                      intuitive UX/UI designs that captivate and delight.
-                    </p>
+                    {" "}
+                    Lorem ipsum – tekst składający się z łacińskich i
+                    quasi-łacińskich wyrazów, mający korzenie w klasycznej
+                    łacinie, wzorowany na fragmencie traktatu Cycerona „O
+                    granicach dobra i zła” napisanego w 45 p.n.e. Tekst jest
+                    stosowany do demonstracji krojów pisma, kompozycji kolumny
+                    itp.{" "}
                   </div>
                 </div>
               </div>

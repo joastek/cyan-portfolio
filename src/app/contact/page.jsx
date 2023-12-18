@@ -84,11 +84,11 @@ const Contact = () => {
                       exit="exit"
                       variants={MainAnim}
                       custom={1}
-                      className="column uppercase  is-7 font-semibold"
+                      className="column uppercase  is-7 font-semibold text-xl"
                     >
                       social media
                     </motion.h3>{" "}
-                    <div className=" column">
+                    <div className=" column  space-y-3">
                       {contact.map((contact, i) => {
                         return (
                           <>
@@ -97,13 +97,14 @@ const Contact = () => {
                               animate="visible"
                               exit="exit"
                               variants={MainAnim}
-                              custom={i}
+                              custom={i + 2}
                               key={i}
-                              className=""
+                              className=" "
                             >
                               <Link
+                                target="_blank"
                                 href={contact.link}
-                                className="block text-white"
+                                className="block text-white text-lg"
                               >
                                 {contact.media}
                               </Link>{" "}
@@ -122,7 +123,7 @@ const Contact = () => {
                       exit="exit"
                       variants={MainAnim}
                       custom={1}
-                      className="column uppercase is-2 font-semibold"
+                      className="column uppercase is-4 font-semibold text-2xl"
                     >
                       mail
                     </motion.h3>
@@ -131,10 +132,11 @@ const Contact = () => {
                       animate="visible"
                       exit="exit"
                       variants={MainAnim}
-                      custom={1}
+                      custom={2}
                       className="column is-6 mr-4"
                     >
                       <Link
+                        target="_blank"
                         href="mailto:czyszczon.jan99@gmail.com"
                         className="text-white"
                       >

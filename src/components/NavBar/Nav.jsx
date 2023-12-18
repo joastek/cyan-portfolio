@@ -3,6 +3,7 @@ import Link from "next/link";
 import { links } from "./data";
 import { perspective } from "./anim";
 import { motion } from "framer-motion";
+import SocialIcons from "../socialIcons/SocialIcons";
 const Nav = ({ menuIsActive, setMenuIsActive }) => {
   return (
     <>
@@ -34,6 +35,16 @@ const Nav = ({ menuIsActive, setMenuIsActive }) => {
             </>
           );
         })}{" "}
+        <motion.div
+          custom={6}
+          variants={perspective}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
+          {" "}
+          <SocialIcons />
+        </motion.div>
       </div>
     </>
   );
