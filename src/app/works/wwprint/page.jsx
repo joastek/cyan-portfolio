@@ -55,7 +55,7 @@ const WWprint = () => {
               <div className="w-full mx-auto flex justify-center ">
                 {" "}
                 <Image
-                  src="/assets/Logo.jpg"
+                  src="/assets/wwprintLogo.jpg"
                   alt="wwprint main photo"
                   width={800}
                   height={800}

@@ -9,19 +9,15 @@ import Link from "next/link";
 import SubPageBacground from "@/components/cube/SubpageBacground";
 import { motion } from "framer-motion";
 import { MainAnim } from "@/components/NavBar/anim";
+import SocialIcons from "@/components/socialIcons/SocialIcons";
+import EmailIcon from "@mui/icons-material/Email";
 const Contact = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
-  const contact = [
-    {
-      media: "github",
-      link: "https://github.com/joastek",
-    },
-    { media: "linkedIn", link: "https://www.linkedin.com/in/czyszczonjan/" },
-    {
-      media: "facebook",
-      link: "https://www.facebook.com/jan.czyszczon.31",
-    },
-  ];
+  const styleForPaper = {
+    width: "48px",
+    height: "48px",
+    color: "#fe53bb",
+  };
   return (
     <>
       <div className="absolute h-screen w-screen">
@@ -76,73 +72,43 @@ const Contact = () => {
                 contact{" "}
               </motion.h1>
               <div className="columns">
-                <div className="column">
-                  <div className="flex">
+                <div className="column  mt-12">
+                  <div className="flex justfy-center text-center items-center">
                     <motion.h3
                       initial="hidden"
                       animate="visible"
                       exit="exit"
                       variants={MainAnim}
                       custom={1}
-                      className="column uppercase  is-7 font-semibold text-xl"
+                      className="column uppercase  is-5 font-semibold text-xl justfy-center text-center flex"
                     >
                       social media
                     </motion.h3>{" "}
-                    <div className=" column  space-y-3">
-                      {contact.map((contact, i) => {
-                        return (
-                          <>
-                            <motion.div
-                              initial="hidden"
-                              animate="visible"
-                              exit="exit"
-                              variants={MainAnim}
-                              custom={i + 2}
-                              key={i}
-                              className=" "
-                            >
-                              <Link
-                                target="_blank"
-                                href={contact.link}
-                                className="block text-white text-lg"
-                              >
-                                {contact.media}
-                              </Link>{" "}
-                            </motion.div>
-                          </>
-                        );
-                      })}
+                    <div className=" column  ">
+                      <SocialIcons />
                     </div>
                   </div>
                 </div>
-                <div className="column">
-                  <div className="flex ">
+                <div className="column  mt-12">
+                  <div className="flex justfy-center text-center items-center">
                     <motion.h3
                       initial="hidden"
                       animate="visible"
                       exit="exit"
                       variants={MainAnim}
                       custom={1}
-                      className="column uppercase is-4 font-semibold text-2xl"
+                      className="column uppercase  is-5 font-semibold text-xl justfy-center text-center flex"
                     >
-                      mail
-                    </motion.h3>
-                    <motion.div
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      variants={MainAnim}
-                      custom={2}
-                      className="column is-6 mr-4"
-                    >
+                      Mail
+                    </motion.h3>{" "}
+                    <div className=" column is-2 ">
                       <Link
-                        target="_blank"
                         href="mailto:czyszczon.jan99@gmail.com"
                         className="text-white"
                       >
-                        czyszczon.jan99@gmail.com
+                        <EmailIcon style={styleForPaper} />
                       </Link>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -155,3 +121,8 @@ const Contact = () => {
 };
 
 export default Contact;
+// Link
+//
+//                       >
+//                         czyszczon.jan99@gmail.com
+//                       </Link>

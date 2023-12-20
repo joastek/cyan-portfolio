@@ -33,7 +33,7 @@ const Works = () => {
     {
       number: "03",
       title: "WytrenowaniApp",
-      src: "otoprzychodnieLogo.png",
+      src: "wytLogo.png",
       color: "#8f51ea",
       description: "Desing & development",
       link: "wytrenowaniApp",
@@ -42,10 +42,10 @@ const Works = () => {
     {
       number: "04",
       title: "cyandev",
-      src: "cyandevLogo.png",
+      src: "logo.png",
       color: "#fe53bb",
       description: "Desing & development",
-      link: "otoprzychodnie",
+      link: "cyandev",
     },
   ];
   const [menuIsActive, setMenuIsActive] = useState(false);

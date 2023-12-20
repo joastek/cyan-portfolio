@@ -13,7 +13,7 @@ const SocialIcons = () => {
   return (
     <>
       {" "}
-      <div className="flex space-x-6  mt-24 ">
+      <div className="flex space-x-6   ">
         <FramerMagnetic>
           {" "}
           <Link

@@ -4,7 +4,7 @@ const DEPTH = 2;
 const LEFT_COLOR = "fe53bb";
 const RIGHT_COLOR = "8f51ea";
 
-const NUM_POINTS = 1500;
+const NUM_POINTS = 800;
 
 const getGradientStop = (ratio) => {
   ratio = ratio > 1 ? 1 : ratio < 0 ? 0 : ratio;

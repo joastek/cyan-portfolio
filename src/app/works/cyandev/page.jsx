@@ -6,8 +6,8 @@ import Header from "@/components/NavBar/Header";
 import BurgerHeader from "@/components/NavBar/BurgerHeader";
 import Link from "next/link";
 import SubPageBacground from "@/components/cube/SubpageBacground";
-import MainBlack from "../../../../public/assets/wwprint/MainBlack.png";
-import MainWhite from "../../../../public/assets/wwprint/MainWhite.png";
+import MainBlack from "../../../../public/assets/cyan/cyan1.png";
+
 const WWprint = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
   return (
@@ -55,55 +55,56 @@ const WWprint = () => {
               <div className="w-full mx-auto flex justify-center ">
                 {" "}
                 <Image
-                  src="/assets/Logo.jpg"
+                  src="/assets/logo.png"
                   alt="wwprint main photo"
                   width={800}
                   height={800}
-                  className="rounded-lg m-6"
+                  className="rounded-lg m-6  border-2 border-pink"
                 />
               </div>
               <div className="mx-16 ">
-                <h1 className="text-3xl border-b-2 border-white pb-4">
-                  WWPrint
+                <h1 className="text-3xl border-b-4 border-purple pb-4 t font-bold">
+                  Cyandev
                 </h1>
-                <div className="columns">
+                <div className="columns text-xl ">
                   <div className="column ">
                     <div className="flex ">
                       <h3 className="column uppercase is-offset-1">category</h3>
-                      <div className="column is-4 mr-4">
-                        Branding UX/UI Design Web Development
-                      </div>
+                      <div className="column is-5 ">Desing & development</div>
+                    </div>
+                    <div className="flex mt-12 ">
+                      <h3 className="column uppercase is-offset-1  ">
+                        <Link
+                          href="https://www.cyandev.pl/"
+                          className="text-white border-b-2 border-pink p-2"
+                        >
+                          demo
+                        </Link>{" "}
+                      </h3>
+                      <h3 className="column uppercase is-6  ">
+                        <Link
+                          href="https://github.com/joastek/cyan-portfolio"
+                          className="text-white border-b-2 border-pink p-2"
+                        >
+                          respository
+                        </Link>{" "}
+                      </h3>
                     </div>
                   </div>
                   <div className="column">
-                    {" "}
-                    Lorem ipsum – tekst składający się z łacińskich i
-                    quasi-łacińskich wyrazów, mający korzenie w klasycznej
-                    łacinie, wzorowany na fragmencie traktatu Cycerona „O
-                    granicach dobra i zła” napisanego w 45 p.n.e. Tekst jest
-                    stosowany do demonstracji krojów pisma, kompozycji kolumny
-                    itp.{" "}
+                    <p className="mt-3"> My personal webiste portfolio.</p>
                   </div>
                 </div>
               </div>
-              <div className="w-full mx-auto flex justify-center ">
-                {" "}
-                <Image
-                  src={MainWhite}
-                  alt="wwprint main photo"
-                  width={800}
-                  height={800}
-                  className="rounded-lg m-6"
-                />
-              </div>
-              <div className="w-full mx-auto flex justify-center ">
+
+              <div className="w-full mx-auto flex justify-center  mt-14">
                 {" "}
                 <Image
                   src={MainBlack}
                   alt="wwprint main photo"
                   width={800}
                   height={800}
-                  className="rounded-lg m-6"
+                  className="rounded-lg m-6 border-2 border-pink"
                 />
               </div>
             </div>

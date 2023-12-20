@@ -41,6 +41,7 @@ const Nav = ({ menuIsActive, setMenuIsActive }) => {
           initial="initial"
           animate="enter"
           exit="exit"
+          className="mt-28"
         >
           {" "}
           <SocialIcons />
