@@ -62,7 +62,7 @@ const WWprint = () => {
                   className="rounded-lg m-6"
                 />
               </div>
-              <div className="mx-16 ">
+              <div className="mx-16  max-sm:mx-0">
                 <h1 className="text-3xl border-b-4 border-purple pb-4 t font-bold">
                   Otoprzychodnie
                 </h1>
@@ -87,17 +87,18 @@ const WWprint = () => {
                     </div>
                   </div>
                   <div className="column mt-2 ">
-                    {" "}
-                    {`  I'm taking a proactive approach to identify and resolve software
+                    <div className=" max-sm:mt-12">
+                      {`  I'm taking a proactive approach to identify and resolve software
                     glitches, my focus is on ensuring seamless functionality. I
                     lead the charge in conceptualizing and implementing
                     innovative design solutions. Additionally, I specialize in
                     fine-tuning website performance to enhance SEO and maximize
                     the effectiveness of Google Ads.`}
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full mx-auto flex justify-center ">
+              <div className="w-full mx-auto flex justify-center  max-sm:mt-24">
                 {" "}
                 <Image
                   src={MainWhite}

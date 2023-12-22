@@ -84,9 +84,16 @@ const Contact = () => {
                     >
                       social media
                     </motion.h3>{" "}
-                    <div className=" column  ">
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={MainAnim}
+                      custom={1}
+                      className=" column  "
+                    >
                       <SocialIcons />
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
                 <div className="column  mt-12">
@@ -101,14 +108,21 @@ const Contact = () => {
                     >
                       Mail
                     </motion.h3>{" "}
-                    <div className=" column is-2 ">
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={MainAnim}
+                      custom={1}
+                      className=" column is-2 "
+                    >
                       <Link
                         href="mailto:czyszczon.jan99@gmail.com"
                         className="text-white"
                       >
                         <EmailIcon style={styleForPaper} />
                       </Link>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>

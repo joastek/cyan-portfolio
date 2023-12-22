@@ -62,7 +62,7 @@ const WWprint = () => {
                   className="rounded-lg m-6  border-2 border-pink"
                 />
               </div>
-              <div className="mx-16 ">
+              <div className="mx-16 max-sm:mx-0">
                 <h1 className="text-3xl border-b-4 border-purple pb-4 t font-bold">
                   Cyandev
                 </h1>
@@ -92,7 +92,7 @@ const WWprint = () => {
                     </div>
                   </div>
                   <div className="column">
-                    <p className="mt-3"> My personal webiste portfolio.</p>
+                    <p className="mt-12"> My personal webiste portfolio.</p>
                   </div>
                 </div>
               </div>
