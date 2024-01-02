@@ -107,7 +107,7 @@ const About = () => {
                   </p>{" "}
                   <button
                     onClick={onButtonClick}
-                    className="mt-7 border-b-4 text-xl border-purple cursor-pointer font-bold"
+                    className="mt-7 border-b-4 text-xl border-purple cursor-pointer font-bold mb-24"
                   >
                     resume <ExpandMoreIcon />
                   </button>

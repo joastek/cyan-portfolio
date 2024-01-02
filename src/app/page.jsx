@@ -80,12 +80,15 @@ export default function Home() {
                   className="text-5xl    justify-center text-center items-center flex max-sm:block max-sm:text-4xl "
                   custom={0}
                 >
-                  <h1 className="font-extrabold max-sm:mb-2 max-sm:block ">
+                  <h1 className="font-[900] max-sm:mb-2 max-sm:block font ">
                     Hello, my name is{" "}
                   </h1>
                   <div className="max-sm:hidden">{"\u00A0"}</div>
 
-                  <h1 className="text-pink mrRobot"> Jan Czyszczon</h1>
+                  <h1 className="text-pink mrRobot mb-[-10px]">
+                    {" "}
+                    Jan Czyszczon
+                  </h1>
                 </motion.div>
 
                 <motion.h2
@@ -93,10 +96,10 @@ export default function Home() {
                   animate="visible"
                   exit="exit"
                   variants={MainAnim}
-                  className="text-2xl flex   justify-center text-center items-center max-sm:text-xl"
+                  className="text-2xl flex   justify-center text-center items-center max-sm:text-xl font-extralight"
                   custom={1}
                 >
-                  <p className="">{` I'm passionate front-end developer, based in Cracow. `}</p>
+                  <p className="font-light text-grey">{` I'm passionate front-end developer, based in Cracow. `}</p>
                 </motion.h2>
                 <div className="mt-6   text-2xl max-sm:text-lg ">
                   <div>

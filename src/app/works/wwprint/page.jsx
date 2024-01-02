@@ -70,7 +70,7 @@ const WWprint = () => {
                   <div className="column ">
                     <div className="flex ">
                       <h3 className="column uppercase is-offset-1">category</h3>
-                      <div className="column is-5 ">Front-end developer</div>
+                      <div className="column is-5 ">Design & development</div>
                     </div>
                     <div className="flex mt-12 ">
                       <h3 className="column uppercase is-offset-1  ">

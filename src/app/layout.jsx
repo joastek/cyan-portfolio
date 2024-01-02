@@ -1,10 +1,10 @@
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.scss";
 import "bulma/css/bulma.css";
 import "@/styles/btn.css";
 import StickyCursor from "@/components/cube/stickyCursor";
 
-const inter = Roboto({ subsets: ["latin"], weight: "400" });
+const inter = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "cyandev ",
